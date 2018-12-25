@@ -70,5 +70,39 @@ print "Max Low        : ", max(LOW)
 
 
 
+def plusminus(LIST2):
+  PLUSMINUSRES = [ ]
+  compareval = LIST2[0]
+  for i in range(0, len(LIST2)-1):
+#     print LIST2[i]
+     if LIST2[i] > compareval:
+       PLUSMINUSRES.append("+")
+     elif LIST2[i] == compareval:
+       PLUSMINUSRES.append("0")
+     else:
+       PLUSMINUSRES.append("-")
+     compareval = LIST2[i]
+  print PLUSMINUSRES  
+  return PLUSMINUSRES   
+#  print LIST2
+
+def close_volume_compare(PM1, PM2):
+  COMPARE_RES = [ ]
+  for i in range(0, len(PM1)-1):
+    if PM1[i] == PM2[i]:
+       COMPARE_RES.append("0")
+    else:
+       COMPARE_RES.append("1")
+  return COMPARE_RES  
+
+LIST1 = [3, 4, 5, 6, 7, 3]
+print LIST1
+PM_CLOSE = plusminus(CLOSE)
+PM_VOLUME = plusminus(VOLUME)
+PM_COMPARE = close_volume_compare(PM_CLOSE, PM_VOLUME)
+
+print "PM_CLOSE:   ", PM_CLOSE
+print "PM_VOLUME:  ", PM_VOLUME
+print "PM_COMPARE: ", PM_COMPARE
 f.close()
 
