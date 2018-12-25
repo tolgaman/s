@@ -1,0 +1,17 @@
+#!/usr/bin/python
+import os
+import string
+
+fo = open("his.csv", "r")
+str = fo.read()
+#print str
+str1 = str.split(",")
+print len(str)
+print len(str1) 
+for i in range(0, len(str1)):
+
+  for i in [1, 2, 3, 4, 5]:
+    print str1[(i-1)*6+i-1], str1[(i-1)*6+i], str1[(i-1)*6+i+1], str1[(i-1)*6+i+2], str1[(i-1)*6+i+3], str1[(i-1)*6+i+4]
+# how to count ->   print count(str1)
+###print str1[0]
+fo.close()
