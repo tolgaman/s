@@ -3,8 +3,11 @@ import os
 import string
 import math
 import re
+import sys
 
-with open("his.csv") as f:
+print sys.argv[1]
+
+with open(sys.argv[1]) as f:
     content = f.read().splitlines()
 print content[0]     ###
 print content[len(content)-1]    ###
