@@ -26,10 +26,10 @@ for i in range(1, len(content)):
   content1 = content[i-1].replace('"', '').split(",")
   DATES.append(content1[0])
   CLOSE.append(float(content1[1]))
-  VOLUME.append(content1[2])
-  OPEN.append(content1[3])
-  HIGH.append(content1[4])
-  LOW.append(content1[5])
+  VOLUME.append(float(content1[2]))
+  OPEN.append(float(content1[3]))
+  HIGH.append(float(content1[4]))
+  LOW.append(float(content1[5]))
 
 
 print "DATES: ", DATES    
@@ -44,10 +44,31 @@ len4a = len(CLOSE)
 #print "len4a: ", len4a
 #close_ = [1, 2, 3, 4, 5]
 #print math.fsum(close_)/len(close_)  #
-print "Minimum Closing: ", min(CLOSE)
-print "Average Closing: ", math.fsum(CLOSE)/len(CLOSE)  
-print "Max Closing    : ", max(CLOSE)
+print "Minimum Close  : ", min(CLOSE)
+print "Average Close  : ", math.fsum(CLOSE)/len(CLOSE)  
+print "Max Close      : ", max(CLOSE)
+
+
+print "Minimum Volume : ", min(VOLUME)
+print "Average Volume : ", math.fsum(VOLUME)/len(VOLUME)  
+print "Max Volume     : ", max(VOLUME)
+
+
+print "Minimum Open   : ", min(OPEN)
+print "Average Open   : ", math.fsum(OPEN)/len(OPEN)
+print "Max Open       : ", max(OPEN)
+
+
+print "Minimum High   : ", min(HIGH)
+print "Average High   : ", math.fsum(HIGH)/len(HIGH)  
+print "Max High       : ", max(HIGH)
+
+
+print "Minimum Low    : ", min(LOW)
+print "Average Low    : ", math.fsum(LOW)/len(LOW)  
+print "Max Low        : ", max(LOW)
 
 
 
 f.close()
+
